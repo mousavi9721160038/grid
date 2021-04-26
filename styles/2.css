@@ -1,0 +1,74 @@
+@font-face {
+  font-family: vazir;
+  src: url("../assets/font/Vazir.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 95vh;
+  position: relative;
+  font-size: 15px;
+  font-family: vazir;
+  direction: rtl;
+  background: #ffffff;
+  color: #f7e8cd;
+  padding-bottom: 25px;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+main h3,
+main p {
+  padding: 12px 20px;
+}
+
+main > div {
+  background-color: #333333;
+}
+
+.title {
+  grid-column: span 4;
+  height: 50px;
+  transition: height 0.4s;
+  overflow: hidden;
+}
+
+.title:hover {
+  height: 120px;
+}
+
+.note {
+  position: relative;
+  grid-column: span 1;
+  height: calc(24vw - 10px);
+  overflow: hidden;
+}
+
+.note p {
+  text-align: justify;
+}
+
+.note img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  object-fit: cover;
+  transition: transform 180s linear;
+}
+
+#react_logo:hover {
+  transform: rotateZ(3600deg);
+}

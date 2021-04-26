@@ -1,0 +1,184 @@
+@font-face {
+  font-family: vazir;
+  src: url("../assets/font/Vazir.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 95vh;
+  position: relative;
+  font-size: 15px;
+  font-family: vazir;
+  direction: rtl;
+  background: linear-gradient(to left, #bb2dcc, #3cefde);
+  padding-bottom: 25px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+main > div {
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  color: #333333;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+main h3,
+main p,
+main ul {
+  padding: 12px 20px;
+}
+
+main > div:hover {
+  box-shadow: 3px 3px 5px 0px #707070;
+}
+
+.information {
+  grid-column: span 3;
+}
+
+.image {
+  grid-column: span 1;
+  width: 200px;
+  height: 200px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.introduction {
+  grid-column: span 3;
+  height: 250px;
+}
+
+.introduction p {
+  text-align: justify;
+  line-height: 30px;
+}
+
+.favorites {
+  width: 250px;
+  grid-column: span 1;
+}
+
+.favorites ul {
+  list-style: none;
+}
+
+.favorites li {
+  padding: 5px 0;
+}
+
+.navigator {
+  grid-column: span 4;
+  height: 80px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigator a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333333;
+  transition: all 0.2s;
+}
+
+.navigator a:hover {
+  font-size: 1.5rem;
+  color: #20b327;
+}
+
+.navigator > div {
+  height: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+}
+
+.navigator > div > div {
+  width: 60px;
+  text-align: center;
+}
+
+.active {
+  color: #20b327 !important;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 0.8rem;
+  }
+
+  .image {
+    width: 175px;
+    height: 175px;
+  }
+
+  .introduction p {
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .information {
+    grid-column: span 4;
+  }
+
+  .introduction {
+    grid-column: span 4;
+    height: unset;
+  }
+
+  .favorites {
+    width: unset;
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 0.7rem;
+  }
+  .introduction p {
+    line-height: 20px;
+  }
+
+  .navigator {
+    height: 60px;
+  }
+}
+
+.heart {
+  transition: transform 2s;
+  display: inline-block;
+}
+
+.heart:hover {
+  transform: rotateZ(1080deg);
+}
