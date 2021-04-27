@@ -1,6 +1,6 @@
 @font-face {
   font-family: vazir;
-  src: url("../assets/font/Vazir.ttf");
+  src: url("../assets/font/Vazir.woff");
 }
 
 * {
@@ -130,6 +130,15 @@ footer {
   text-align: center;
 }
 
+.heart {
+  transition: transform 2s;
+  display: inline-block;
+}
+
+.heart:hover {
+  transform: rotateZ(1080deg);
+}
+
 @media (max-width: 1024px) {
   p {
     font-size: 0.8rem;
@@ -172,13 +181,4 @@ footer {
   .navigator {
     height: 60px;
   }
-}
-
-.heart {
-  transition: transform 2s;
-  display: inline-block;
-}
-
-.heart:hover {
-  transform: rotateZ(1080deg);
 }
