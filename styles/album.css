@@ -9,49 +9,50 @@
 }
 
 body {
-  min-height: 95vh;
+  min-height: 90vh;
   position: relative;
   font-size: 15px;
   font-family: vazir;
   direction: rtl;
   background: #1d1d1d;
   color: #fff8dc;
-  padding: 25px 0;
-}
-
-h2{
-  padding: 20px;
+  padding-bottom: 25px;
 }
 
 main{
   width: 100%;
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10%;
-  grid-template-rows: calc( (96vw - 50px) / 10 ) calc( (96vw - 50px) / 10 ) calc( (96vw - 50px) / 10 )  calc( (96vw - 50px) / 10 );
+  grid-template-rows: auto repeat(3, calc( (96vw - 50px) / 10 )) auto;
   gap: 20px;
-  padding: 20px;
+  padding: 30px 20px;
   box-sizing: border-box;
   justify-content: space-between;
 }
 
-main > div:nth-child(1) {
+header {
+  grid-column: span 8;
+}
+
+
+.flower:nth-of-type(1) {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-main > div:nth-child(2) {
+.flower:nth-of-type(2) {
   grid-column: span 5;
 }
 
-main > div:nth-child(3) {
+.flower:nth-of-type(3) {
   grid-row: span 3;
 }
 
-main > div:nth-child(9) {
+.flower:nth-of-type(9) {
   grid-column: span 4;
 }
 
-main > div:nth-child(10) {
+.flower:nth-of-type(10) {
   grid-column: span 3;
 }
 
@@ -98,7 +99,6 @@ main img {
   color: #ec52f1 !important;
 }
 
-
 footer {
   position: absolute;
   bottom: 10px;
@@ -116,4 +116,59 @@ footer {
 
 .heart:hover {
   transform: rotateZ(1080deg);
+}
+
+@media(max-width:768px){
+
+  body {
+    min-height: 95vh;
+  }
+
+  main{
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: auto repeat(5 , calc( (96vw - 50px) / 5 )) auto;
+    grid: 10px;
+
+  }
+
+  header{
+    grid-column: span 4;
+  }
+  
+  .flower:nth-of-type(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .flower:nth-of-type(2) {
+    grid-column: span 2;
+  }
+  
+  .flower:nth-of-type(3) {
+    grid-column-start: 4;
+    grid-row: 3 / span 3;
+  }
+  
+  .flower:nth-of-type(9) {
+    grid-column: span 2;
+  }
+  
+  .flower:nth-of-type(10) {
+    grid-column: span 4;
+  }
+
+  .navigator {
+    grid-column: span 4;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media(max-width:400px){
+  header {
+    font-size: 0.8rem;
+  }
 }

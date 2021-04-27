@@ -92,7 +92,7 @@ main > div {
 
 .navigator a:hover {
   font-size: 1.5rem;
-  color: #b3208e;
+  color: #dbd818;
 }
 
 .navigator > div {
@@ -108,7 +108,7 @@ main > div {
 }
 
 .active {
-  color: #b3208e !important;
+  color: #dbd818 !important;
 }
 
 footer {
